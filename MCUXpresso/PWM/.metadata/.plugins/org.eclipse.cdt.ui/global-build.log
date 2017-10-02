@@ -1,0 +1,974 @@
+11:58:19 **** Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+Building file: ../src/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSIS_CORE_LPC11xx -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/system_LPC11xx.d" -MT"src/system_LPC11xx.o" -MT"src/system_LPC11xx.d" -o "src/system_LPC11xx.o" "../src/system_LPC11xx.c"
+Finished building: ../src/system_LPC11xx.c
+ 
+Building target: libCMSIS_CORE_LPC11xx.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libCMSIS_CORE_LPC11xx.a"  ./src/system_LPC11xx.o   
+c:\NXP\MCUXpressoIDE_10.0.2_411\ide\tools\bin\arm-none-eabi-ar.exe: creating libCMSIS_CORE_LPC11xx.a
+Finished building target: libCMSIS_CORE_LPC11xx.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "libCMSIS_CORE_LPC11xx.a" ; # arm-none-eabi-objdump -h -S "libCMSIS_CORE_LPC11xx.a" >"libCMSIS_CORE_LPC11xx.lss"
+   text	   data	    bss	    dec	    hex	filename
+    388	      4	      0	    392	    188	system_LPC11xx.o (ex libCMSIS_CORE_LPC11xx.a)
+ 
+11:58:21 **** Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+Building file: ../src/Example_1.cpp
+Building file: ../src/cr_cpp_config.cpp
+Building file: ../src/cr_startup_lpc11xx.cpp
+Building file: ../src/crp.c
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_1.d" -MT"src/Example_1.o" -MT"src/Example_1.d" -o "src/Example_1.o" "../src/Example_1.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/cr_cpp_config.d" -MT"src/cr_cpp_config.o" -MT"src/cr_cpp_config.d" -o "src/cr_cpp_config.o" "../src/cr_cpp_config.cpp"
+Invoking: MCU C++ Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/cr_startup_lpc11xx.d" -MT"src/cr_startup_lpc11xx.o" -MT"src/cr_startup_lpc11xx.d" -o "src/cr_startup_lpc11xx.o" "../src/cr_startup_lpc11xx.cpp"
+arm-none-eabi-gcc -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+../src/Example_1.cpp: In function 'int main()':
+../src/Example_1.cpp:20:16: error: 'init32BTimer0' was not declared in this scope
+  init32BTimer0(); //Initialize Timer0
+                ^
+ 
+make: *** [src/Example_1.o] Error 1
+make: *** Waiting for unfinished jobs....
+Finished building: ../src/cr_startup_lpc11xx.cpp
+ 
+Finished building: ../src/cr_cpp_config.cpp
+ 
+11:58:47 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+11:58:47 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+Building file: ../src/Example_1.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_1.d" -MT"src/Example_1.o" -MT"src/Example_1.d" -o "src/Example_1.o" "../src/Example_1.cpp"
+Finished building: ../src/Example_1.cpp
+ 
+Building target: Example_1.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_1_Debug.ld" -o "Example_1.axf"  ./src/Example_1.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1144 B        32 KB      3.49%
+./src/Example_1.o: In function `main':
+Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\Example_1\Debug/../src/Example_1.cpp:20: undefined reference to `init32BTimer0_PWM()'
+         RamLoc8:          28 B         8 KB      0.34%
+collect2.exe: error: ld returned 1 exit status
+make: *** [Example_1.axf] Error 1
+11:58:59 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+11:58:59 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+Building file: ../src/Example_1.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_1.d" -MT"src/Example_1.o" -MT"src/Example_1.d" -o "src/Example_1.o" "../src/Example_1.cpp"
+Finished building: ../src/Example_1.cpp
+ 
+Building target: Example_1.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_1_Debug.ld" -o "Example_1.axf"  ./src/Example_1.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1236 B        32 KB      3.77%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_1.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_1.axf"; # arm-none-eabi-objcopy -v -O binary "Example_1.axf" "Example_1.bin" ; # checksum -p LPC1114_302 -d "Example_1.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1236	      0	     28	   1264	    4f0	Example_1.axf
+ 
+11:59:20 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+11:59:21 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+11:59:22 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:00:29 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:00:30 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+Building file: ../src/Example_1.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_1.d" -MT"src/Example_1.o" -MT"src/Example_1.d" -o "src/Example_1.o" "../src/Example_1.cpp"
+Finished building: ../src/Example_1.cpp
+ 
+Building target: Example_1.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_1_Debug.ld" -o "Example_1.axf"  ./src/Example_1.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1236 B        32 KB      3.77%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_1.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_1.axf"; # arm-none-eabi-objcopy -v -O binary "Example_1.axf" "Example_1.bin" ; # checksum -p LPC1114_302 -d "Example_1.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1236	      0	     28	   1264	    4f0	Example_1.axf
+ 
+12:00:47 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:00:47 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:00:48 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:03:02 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:03:02 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+Building file: ../src/Example_1.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_1.d" -MT"src/Example_1.o" -MT"src/Example_1.d" -o "src/Example_1.o" "../src/Example_1.cpp"
+../src/Example_1.cpp: In function 'int main()':
+../src/Example_1.cpp:30:38: error: 'updatePulseWidth' was not declared in this scope
+   updatePulseWidth(pulseWidths[count]); //Update LED Pulse Width
+                                      ^
+make: *** [src/Example_1.o] Error 1
+12:04:14 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:04:14 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+Building file: ../src/Example_1.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_1.d" -MT"src/Example_1.o" -MT"src/Example_1.d" -o "src/Example_1.o" "../src/Example_1.cpp"
+../src/Example_1.cpp: In function 'int main()':
+../src/Example_1.cpp:30:38: error: 'updatePulseWidth' was not declared in this scope
+   updatePulseWidth(pulseWidths[count]); //Update LED Pulse Width
+                                      ^
+make: *** [src/Example_1.o] Error 1
+12:04:31 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:04:32 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+Building file: ../src/Example_1.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_1.d" -MT"src/Example_1.o" -MT"src/Example_1.d" -o "src/Example_1.o" "../src/Example_1.cpp"
+Finished building: ../src/Example_1.cpp
+ 
+Building target: Example_1.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_1_Debug.ld" -o "Example_1.axf"  ./src/Example_1.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1444 B        32 KB      4.41%
+./src/Example_1.o: In function `main':
+Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\Example_1\Debug/../src/Example_1.cpp:21: undefined reference to `init16BTimer0()'
+collect2.exe: error: ld returned 1 exit status
+         RamLoc8:          28 B         8 KB      0.34%
+make: *** [Example_1.axf] Error 1
+12:05:32 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:05:33 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+Building file: ../src/Example_1.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_1.d" -MT"src/Example_1.o" -MT"src/Example_1.d" -o "src/Example_1.o" "../src/Example_1.cpp"
+Finished building: ../src/Example_1.cpp
+ 
+Building target: Example_1.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_1_Debug.ld" -o "Example_1.axf"  ./src/Example_1.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1504 B        32 KB      4.59%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_1.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_1.axf"; # arm-none-eabi-objcopy -v -O binary "Example_1.axf" "Example_1.bin" ; # checksum -p LPC1114_302 -d "Example_1.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1504	      0	     28	   1532	    5fc	Example_1.axf
+ 
+12:05:40 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:05:40 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:05:42 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:11:51 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:11:52 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:11:52 **** Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+Building file: ../src/Example_2.cpp
+Building file: ../src/cr_cpp_config.cpp
+Building file: ../src/crp.c
+Building file: ../src/cr_startup_lpc11xx.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_2.d" -MT"src/Example_2.o" -MT"src/Example_2.d" -o "src/Example_2.o" "../src/Example_2.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/cr_cpp_config.d" -MT"src/cr_cpp_config.o" -MT"src/cr_cpp_config.d" -o "src/cr_cpp_config.o" "../src/cr_cpp_config.cpp"
+Invoking: MCU C++ Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/cr_startup_lpc11xx.d" -MT"src/cr_startup_lpc11xx.o" -MT"src/cr_startup_lpc11xx.d" -o "src/cr_startup_lpc11xx.o" "../src/cr_startup_lpc11xx.cpp"
+arm-none-eabi-gcc -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+Finished building: ../src/cr_startup_lpc11xx.cpp
+Finished building: ../src/cr_cpp_config.cpp
+Finished building: ../src/Example_2.cpp
+ 
+ 
+ 
+ 
+Building target: Example_2.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_2_Debug.ld" -o "Example_2.axf"  ./src/Example_2.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1476 B        32 KB      4.50%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_2.axf"; # arm-none-eabi-objcopy -v -O binary "Example_2.axf" "Example_2.bin" ; # checksum -p LPC1114_302 -d "Example_2.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1476	      0	     28	   1504	    5e0	Example_2.axf
+ 
+12:12:13 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:12:13 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:12:15 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:15:03 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:15:03 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:15:04 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+Building file: ../src/Example_2.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_2.d" -MT"src/Example_2.o" -MT"src/Example_2.d" -o "src/Example_2.o" "../src/Example_2.cpp"
+Finished building: ../src/Example_2.cpp
+ 
+Building target: Example_2.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_2_Debug.ld" -o "Example_2.axf"  ./src/Example_2.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1464 B        32 KB      4.47%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_2.axf"; # arm-none-eabi-objcopy -v -O binary "Example_2.axf" "Example_2.bin" ; # checksum -p LPC1114_302 -d "Example_2.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1464	      0	     28	   1492	    5d4	Example_2.axf
+ 
+12:15:07 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:15:18 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:15:19 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:15:30 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:15:31 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:15:31 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:15:37 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:15:38 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:15:39 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:18:29 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:18:30 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+Building file: ../src/Example_1.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_1.d" -MT"src/Example_1.o" -MT"src/Example_1.d" -o "src/Example_1.o" "../src/Example_1.cpp"
+Finished building: ../src/Example_1.cpp
+ 
+Building target: Example_1.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_1_Debug.ld" -o "Example_1.axf"  ./src/Example_1.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1500 B        32 KB      4.58%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_1.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_1.axf"; # arm-none-eabi-objcopy -v -O binary "Example_1.axf" "Example_1.bin" ; # checksum -p LPC1114_302 -d "Example_1.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1500	      0	     28	   1528	    5f8	Example_1.axf
+ 
+12:18:30 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:18:59 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:19:00 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:19:01 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:20:18 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:20:19 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+Building file: ../src/Example_1.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_1.d" -MT"src/Example_1.o" -MT"src/Example_1.d" -o "src/Example_1.o" "../src/Example_1.cpp"
+Finished building: ../src/Example_1.cpp
+ 
+Building target: Example_1.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_1_Debug.ld" -o "Example_1.axf"  ./src/Example_1.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1500 B        32 KB      4.58%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_1.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_1.axf"; # arm-none-eabi-objcopy -v -O binary "Example_1.axf" "Example_1.bin" ; # checksum -p LPC1114_302 -d "Example_1.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1500	      0	     28	   1528	    5f8	Example_1.axf
+ 
+12:20:19 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:22:00 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:22:01 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+Building file: ../src/Example_1.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_1.d" -MT"src/Example_1.o" -MT"src/Example_1.d" -o "src/Example_1.o" "../src/Example_1.cpp"
+Finished building: ../src/Example_1.cpp
+ 
+Building target: Example_1.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_1_Debug.ld" -o "Example_1.axf"  ./src/Example_1.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1544 B        32 KB      4.71%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_1.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_1.axf"; # arm-none-eabi-objcopy -v -O binary "Example_1.axf" "Example_1.bin" ; # checksum -p LPC1114_302 -d "Example_1.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1544	      0	     28	   1572	    624	Example_1.axf
+ 
+12:22:01 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:22:07 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:22:08 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:22:09 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:23:28 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:23:29 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+Building file: ../src/Example_1.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_1.d" -MT"src/Example_1.o" -MT"src/Example_1.d" -o "src/Example_1.o" "../src/Example_1.cpp"
+Finished building: ../src/Example_1.cpp
+ 
+Building target: Example_1.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_1_Debug.ld" -o "Example_1.axf"  ./src/Example_1.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1548 B        32 KB      4.72%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_1.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_1.axf"; # arm-none-eabi-objcopy -v -O binary "Example_1.axf" "Example_1.bin" ; # checksum -p LPC1114_302 -d "Example_1.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1548	      0	     28	   1576	    628	Example_1.axf
+ 
+12:23:30 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:23:36 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:23:36 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:23:43 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:23:43 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:23:44 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:34:43 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:34:44 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+Building file: ../src/Example_1.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_1.d" -MT"src/Example_1.o" -MT"src/Example_1.d" -o "src/Example_1.o" "../src/Example_1.cpp"
+Finished building: ../src/Example_1.cpp
+ 
+Building target: Example_1.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_1_Debug.ld" -o "Example_1.axf"  ./src/Example_1.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1544 B        32 KB      4.71%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_1.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_1.axf"; # arm-none-eabi-objcopy -v -O binary "Example_1.axf" "Example_1.bin" ; # checksum -p LPC1114_302 -d "Example_1.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1544	      0	     28	   1572	    624	Example_1.axf
+ 
+12:34:44 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:34:49 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:34:50 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:34:51 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:35:38 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:35:38 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+Building file: ../src/Example_1.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_1.d" -MT"src/Example_1.o" -MT"src/Example_1.d" -o "src/Example_1.o" "../src/Example_1.cpp"
+Finished building: ../src/Example_1.cpp
+ 
+Building target: Example_1.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_1_Debug.ld" -o "Example_1.axf"  ./src/Example_1.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1544 B        32 KB      4.71%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_1.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_1.axf"; # arm-none-eabi-objcopy -v -O binary "Example_1.axf" "Example_1.bin" ; # checksum -p LPC1114_302 -d "Example_1.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1544	      0	     28	   1572	    624	Example_1.axf
+ 
+12:35:39 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:35:41 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:35:41 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:35:43 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:35:46 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:35:46 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:36:13 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:36:14 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+Building file: ../src/Example_1.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_1.d" -MT"src/Example_1.o" -MT"src/Example_1.d" -o "src/Example_1.o" "../src/Example_1.cpp"
+Finished building: ../src/Example_1.cpp
+ 
+Building target: Example_1.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_1_Debug.ld" -o "Example_1.axf"  ./src/Example_1.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1544 B        32 KB      4.71%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_1.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_1.axf"; # arm-none-eabi-objcopy -v -O binary "Example_1.axf" "Example_1.bin" ; # checksum -p LPC1114_302 -d "Example_1.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1544	      0	     28	   1572	    624	Example_1.axf
+ 
+12:36:15 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:36:20 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:36:20 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:36:22 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:56:25 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:56:26 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+Building file: ../src/Example_1.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_1.d" -MT"src/Example_1.o" -MT"src/Example_1.d" -o "src/Example_1.o" "../src/Example_1.cpp"
+Finished building: ../src/Example_1.cpp
+ 
+Building target: Example_1.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_1_Debug.ld" -o "Example_1.axf"  ./src/Example_1.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1504 B        32 KB      4.59%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_1.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_1.axf"; # arm-none-eabi-objcopy -v -O binary "Example_1.axf" "Example_1.bin" ; # checksum -p LPC1114_302 -d "Example_1.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1504	      0	     28	   1532	    5fc	Example_1.axf
+ 
+12:56:26 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+Building file: ../src/Example_2.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_2.d" -MT"src/Example_2.o" -MT"src/Example_2.d" -o "src/Example_2.o" "../src/Example_2.cpp"
+Finished building: ../src/Example_2.cpp
+ 
+Building target: Example_2.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_2_Debug.ld" -o "Example_2.axf"  ./src/Example_2.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1500 B        32 KB      4.58%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_2.axf"; # arm-none-eabi-objcopy -v -O binary "Example_2.axf" "Example_2.bin" ; # checksum -p LPC1114_302 -d "Example_2.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1500	      0	     28	   1528	    5f8	Example_2.axf
+ 
+12:56:31 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:56:32 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+12:56:33 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+13:00:14 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:00:14 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+Building file: ../src/Example_1.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_1.d" -MT"src/Example_1.o" -MT"src/Example_1.d" -o "src/Example_1.o" "../src/Example_1.cpp"
+Finished building: ../src/Example_1.cpp
+ 
+Building target: Example_1.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_1_Debug.ld" -o "Example_1.axf"  ./src/Example_1.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1500 B        32 KB      4.58%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_1.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_1.axf"; # arm-none-eabi-objcopy -v -O binary "Example_1.axf" "Example_1.bin" ; # checksum -p LPC1114_302 -d "Example_1.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1500	      0	     28	   1528	    5f8	Example_1.axf
+ 
+13:00:15 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+Building file: ../src/Example_2.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_2.d" -MT"src/Example_2.o" -MT"src/Example_2.d" -o "src/Example_2.o" "../src/Example_2.cpp"
+Finished building: ../src/Example_2.cpp
+ 
+Building target: Example_2.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_2_Debug.ld" -o "Example_2.axf"  ./src/Example_2.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1504 B        32 KB      4.59%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_2.axf"; # arm-none-eabi-objcopy -v -O binary "Example_2.axf" "Example_2.bin" ; # checksum -p LPC1114_302 -d "Example_2.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1504	      0	     28	   1532	    5fc	Example_2.axf
+ 
+13:00:18 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:00:18 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+13:00:19 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+13:03:09 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:03:09 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+Building file: ../src/Example_1.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_1.d" -MT"src/Example_1.o" -MT"src/Example_1.d" -o "src/Example_1.o" "../src/Example_1.cpp"
+Finished building: ../src/Example_1.cpp
+ 
+Building target: Example_1.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_1_Debug.ld" -o "Example_1.axf"  ./src/Example_1.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1500 B        32 KB      4.58%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_1.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_1.axf"; # arm-none-eabi-objcopy -v -O binary "Example_1.axf" "Example_1.bin" ; # checksum -p LPC1114_302 -d "Example_1.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1500	      0	     28	   1528	    5f8	Example_1.axf
+ 
+13:03:10 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+Building file: ../src/Example_2.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_2.d" -MT"src/Example_2.o" -MT"src/Example_2.d" -o "src/Example_2.o" "../src/Example_2.cpp"
+Finished building: ../src/Example_2.cpp
+ 
+Building target: Example_2.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1343-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_2_Debug.ld" -o "Example_2.axf"  ./src/Example_2.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1504 B        32 KB      4.59%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_2.axf"; # arm-none-eabi-objcopy -v -O binary "Example_2.axf" "Example_2.bin" ; # checksum -p LPC1114_302 -d "Example_2.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1504	      0	     28	   1532	    5fc	Example_2.axf
+ 
+13:03:13 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:03:13 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+13:03:14 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+13:56:49 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+Building file: ../src/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSIS_CORE_LPC11xx -I"Y:\LPC1114-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/system_LPC11xx.d" -MT"src/system_LPC11xx.o" -MT"src/system_LPC11xx.d" -o "src/system_LPC11xx.o" "../src/system_LPC11xx.c"
+Finished building: ../src/system_LPC11xx.c
+ 
+Building target: libCMSIS_CORE_LPC11xx.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libCMSIS_CORE_LPC11xx.a"  ./src/system_LPC11xx.o   
+Finished building target: libCMSIS_CORE_LPC11xx.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "libCMSIS_CORE_LPC11xx.a" ; # arm-none-eabi-objdump -h -S "libCMSIS_CORE_LPC11xx.a" >"libCMSIS_CORE_LPC11xx.lss"
+   text	   data	    bss	    dec	    hex	filename
+    388	      4	      0	    392	    188	system_LPC11xx.o (ex libCMSIS_CORE_LPC11xx.a)
+ 
+13:56:50 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+Building file: ../src/Example_1.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1114-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_1.d" -MT"src/Example_1.o" -MT"src/Example_1.d" -o "src/Example_1.o" "../src/Example_1.cpp"
+Finished building: ../src/Example_1.cpp
+ 
+Building target: Example_1.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1114-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_1_Debug.ld" -o "Example_1.axf"  ./src/Example_1.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1500 B        32 KB      4.58%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_1.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_1.axf"; # arm-none-eabi-objcopy -v -O binary "Example_1.axf" "Example_1.bin" ; # checksum -p LPC1114_302 -d "Example_1.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1500	      0	     28	   1528	    5f8	Example_1.axf
+ 
+13:56:50 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+Building file: ../src/Example_2.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1114-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_2.d" -MT"src/Example_2.o" -MT"src/Example_2.d" -o "src/Example_2.o" "../src/Example_2.cpp"
+Finished building: ../src/Example_2.cpp
+ 
+Building target: Example_2.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1114-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_2_Debug.ld" -o "Example_2.axf"  ./src/Example_2.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1504 B        32 KB      4.59%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_2.axf"; # arm-none-eabi-objcopy -v -O binary "Example_2.axf" "Example_2.bin" ; # checksum -p LPC1114_302 -d "Example_2.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1504	      0	     28	   1532	    5fc	Example_2.axf
+ 
+14:00:51 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+14:00:51 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+14:00:52 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+Building file: ../src/Example_2.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1114-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_2.d" -MT"src/Example_2.o" -MT"src/Example_2.d" -o "src/Example_2.o" "../src/Example_2.cpp"
+Finished building: ../src/Example_2.cpp
+ 
+Building target: Example_2.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1114-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_2_Debug.ld" -o "Example_2.axf"  ./src/Example_2.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1504 B        32 KB      4.59%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_2.axf"; # arm-none-eabi-objcopy -v -O binary "Example_2.axf" "Example_2.bin" ; # checksum -p LPC1114_302 -d "Example_2.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1504	      0	     28	   1532	    5fc	Example_2.axf
+ 
+14:01:37 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+14:01:38 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+14:01:39 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+14:02:55 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+14:02:56 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+14:02:56 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+Building file: ../src/Example_2.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1114-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_2.d" -MT"src/Example_2.o" -MT"src/Example_2.d" -o "src/Example_2.o" "../src/Example_2.cpp"
+Finished building: ../src/Example_2.cpp
+ 
+Building target: Example_2.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1114-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_2_Debug.ld" -o "Example_2.axf"  ./src/Example_2.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1504 B        32 KB      4.59%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_2.axf"; # arm-none-eabi-objcopy -v -O binary "Example_2.axf" "Example_2.bin" ; # checksum -p LPC1114_302 -d "Example_2.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1504	      0	     28	   1532	    5fc	Example_2.axf
+ 
+14:04:29 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+14:04:29 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+Building file: ../src/Example_1.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1114-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_1.d" -MT"src/Example_1.o" -MT"src/Example_1.d" -o "src/Example_1.o" "../src/Example_1.cpp"
+Finished building: ../src/Example_1.cpp
+ 
+Building target: Example_1.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1114-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_1_Debug.ld" -o "Example_1.axf"  ./src/Example_1.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1500 B        32 KB      4.58%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_1.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_1.axf"; # arm-none-eabi-objcopy -v -O binary "Example_1.axf" "Example_1.bin" ; # checksum -p LPC1114_302 -d "Example_1.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1500	      0	     28	   1528	    5f8	Example_1.axf
+ 
+14:04:30 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+14:04:33 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+14:04:33 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+14:04:34 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+14:05:08 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+14:05:09 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+14:05:09 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+Building file: ../src/Example_2.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -DCPP_USE_HEAP -D__LPC11XX__ -I"Y:\LPC1114-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/Example_2.d" -MT"src/Example_2.o" -MT"src/Example_2.d" -o "src/Example_2.o" "../src/Example_2.cpp"
+Finished building: ../src/Example_2.cpp
+ 
+Building target: Example_2.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1114-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_2_Debug.ld" -o "Example_2.axf"  ./src/Example_2.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1504 B        32 KB      4.59%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_2.axf"; # arm-none-eabi-objcopy -v -O binary "Example_2.axf" "Example_2.bin" ; # checksum -p LPC1114_302 -d "Example_2.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1504	      0	     28	   1532	    5fc	Example_2.axf
+ 
+14:05:22 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+14:05:22 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+14:05:23 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+14:21:22 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+14:21:22 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+Building target: Example_1.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1114-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_1_Debug.ld" -o "Example_1.axf"  ./src/Example_1.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1500 B        32 KB      4.58%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_1.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_1.axf"; # arm-none-eabi-objcopy -v -O binary "Example_1.axf" "Example_1.bin" ; # checksum -p LPC1114_302 -d "Example_1.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1500	      0	     28	   1528	    5f8	Example_1.axf
+ 
+14:21:25 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+14:21:25 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+14:21:26 **** Incremental Build of configuration Debug for project Example_1 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+14:21:55 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+14:21:56 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+Building target: Example_2.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1114-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_2_Debug.ld" -o "Example_2.axf"  ./src/Example_2.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1504 B        32 KB      4.59%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_2.axf"; # arm-none-eabi-objcopy -v -O binary "Example_2.axf" "Example_2.bin" ; # checksum -p LPC1114_302 -d "Example_2.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1504	      0	     28	   1532	    5fc	Example_2.axf
+ 

@@ -1,0 +1,19 @@
+14:21:56 **** Incremental Build of configuration Debug for project Example_2 ****
+make -r -j4 all 
+Building target: Example_2.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1114-Tutorial-Examples\MCUXpresso\PWM\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="Example_2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Example_2_Debug.ld" -o "Example_2.axf"  ./src/Example_2.o ./src/cr_cpp_config.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1504 B        32 KB      4.59%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: Example_2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Example_2.axf"; # arm-none-eabi-objcopy -v -O binary "Example_2.axf" "Example_2.bin" ; # checksum -p LPC1114_302 -d "Example_2.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1504	      0	     28	   1532	    5fc	Example_2.axf
+ 
+
+14:21:56 Build Finished (took 255ms)
+
